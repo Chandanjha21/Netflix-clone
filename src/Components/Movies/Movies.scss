@@ -1,0 +1,58 @@
+.movies-page {
+    padding: 2rem;
+}
+
+.movie-row {
+    margin-bottom: 3rem;
+}
+
+.genre-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.movie-row-posters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.movie-poster {
+    position: relative;
+    cursor: pointer;
+}
+
+.poster-image {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.poster-image:hover {
+    transform: scale(1.1);
+}
+
+.poster-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+.movie-poster:hover .poster-overlay {
+    opacity: 1;
+}
+
+.poster-overlay .text-white {
+    margin: 0 0.5rem;
+}
